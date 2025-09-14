@@ -1,0 +1,95 @@
+
+Atividades realizadas por Thayla no curso de Git e GitHub - Pretalab | Ciclo 14 | Ano 2025
+
+# Instalação e ativação da chave SSH
+
+1. Verificar se já existe a chave:
+ls ~/.ssh
+
+2. Instalar uma nova chave:
+ssh-keygen -t ed25519 -C "seu-email@exemplo.com"
+
+3. Ativar o agente SSH e carregar a chave:
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+4. Exibir as chaves para copiar:
+// Pública: cat ~/.ssh/id_ed25519.pub
+// Privada: cat ~/.ssh/id_ed25519
+! Exemplo de chave pública: ssh-ed25519 ...Z1YYm+5K4 seu-email@mail.com
+
+5. Ativar no Github
+- Copiar a chave pública para o GitHub:
+- Acesse GitHub → Settings → SSH and GPG keys → New SSH key
+- Cole a chave pública e salve.
+
+---
+
+# Comandos básicos
+git init
+git status
+git add nome-do-arquivo
+git commit -m "mensagem"
+git log 
+git log --oneline   // histórico linha a linha
+git diff
+
+# Comando para enviar alterações para o GitHub:
+git push  -u origin Main           //primeiro push
+git push origin main ou git push    //demais push
+
+
+# Comandos para desfazer mudanças locais:
+git restore nome-do-arquivo       // remove arquivo
+git restore --staged nome-do-arquivo    //remove arquivo do staged
+git  reset --soft HEAD~1        // desfaz o último commit mantendo as alterações
+git  reset --hard HEAD~1        // desfaz o último commit e também remove TODAS as alterações
+
+
+---
+# Branches
+
+git checkout -b nome-da-branch      //Criar uma nova branch
+git branch -D nome-da-branch        //Força a deleção da branch
+git branch -d nome-da-branch        //Exclusão de forma segura, somente quando as alterações foram mescladas.
+git checkout nome-da-branch         //Trocar de branch
+git branch                         //Verificar as branches do projeto
+
+# Git Merge
+- mescla as branches
+- o histórico é não linear
+- cria um novo commit extra
+- pode deixar o histórico poluído em grandes projetos 
+
+# Git Rebase
+- aplica os commits da branch atual e os coloca “no topo” da branch base
+- histórico fica linear, sem commits de merge.
+- ideal para quando está trabalhando sozinho
+
+---
+# Pull Request (PR)
+É uma solicitação para que suas alterações feitas em uma branch sejam revisadas e integradas à branch principal (geralmente main) em um repositório remoto, como o GitHub.
+É usado para:
+- Compartilhar mudanças com outras pessoas.
+- Pedir revisão de código.
+- Fazer colaboração segura antes de juntar o código.
+
+# Fork
+Faz uma cópia do repositório remoto  no próprio  Github e você pode  alterar esse repositório como se fosse seu, fazer o push, mesmo sem permissão.
+
+# Clone
+- Faz uma cópia do repositório remoto na sua máquina.
+- Pode usar o repositório, mas para subir alterações, precisa de permissão.
+
+---
+Simulação de um Projeto Colaborativo
+
+1. Deu um fork do repositório da prof Jaqueline e clonou usando git pull localmente.
+2. Criou uma branch local chamada 'feature-thayla-oliveira' para desenvolver suas alterações.
+3. Editou os arquivos .gitignore, aboutme.txt e teste.py com suas informações.
+4. Utilizou comandos como git add, git commit e git push para versionar e enviar suas alterações.
+5. Realizou o merge da branch 'feature-thayla-oliveira' com a branch 'main'.
+6. Aprendeu a criar e visualizar tags com git tag, e fez push das tags para o repositório remoto.
+7. Entendeu o funcionamento de pull requests e como utilizá-los para colaborar em projetos.
+8. Explorou comandos avançados como git reset, git revert, git stash e git alias.
+9. Criou um README organizado com resumo das aulas e fluxo de trabalho com Git.
