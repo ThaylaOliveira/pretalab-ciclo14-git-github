@@ -1,6 +1,6 @@
-# 🛠️ Oficina de Git e GitHub — Pretalab | Ciclo 14 | Ano 2025
+## 🚀 Oficina de Git e GitHub — Pretalab | Ciclo 14 | Ano 2025
 
-## 📅 Primeira Semana — Introdução ao Git
+## Primeira Semana — Introdução ao Git
 
 ### Aula 1: Introdução ao Git
 Apresentação dos conceitos básicos de Git e sua importância na colaboração entre desenvolvedores(as).
@@ -13,7 +13,7 @@ Criação de repositório remoto, conexão com o Git local e uso dos principais 
 
 ---
 
-## 🚀 Segunda Semana — Git Avançado
+## Segunda Semana — Git Avançado
 
 ### Aula 1: Branches e Fluxo de Trabalho
 Conceito de branches, criação e navegação entre elas. Uso de `git checkout`, `git branch`, `git merge` e boas práticas de organização.
