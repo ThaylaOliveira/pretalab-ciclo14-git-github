@@ -47,6 +47,39 @@ git  reset --hard HEAD~1        // desfaz o último commit e também remove TODA
 
 
 ---
+# Branches
+
+git checkout -b nome-da-branch      //Criar uma nova branch
+git branch -D nome-da-branch        //Força a deleção da branch
+git branch -d nome-da-branch        //Exclusão de forma segura, somente quando as alterações foram mescladas.
+git checkout nome-da-branch         //Trocar de branch
+git branch                         //Verificar as branches do projeto
+
+# Git Merge
+- mescla as branches
+- o histórico é não linear
+- cria um novo commit extra
+- pode deixar o histórico poluído em grandes projetos 
+
+# Git Rebase
+- aplica os commits da branch atual e os coloca “no topo” da branch base
+- histórico fica linear, sem commits de merge.
+- ideal para quando está trabalhando sozinho
+
+---
+# Pull Request (PR)
+É uma solicitação para que suas alterações feitas em uma branch sejam revisadas e integradas à branch principal (geralmente main) em um repositório remoto, como o GitHub.
+É usado para:
+- Compartilhar mudanças com outras pessoas.
+- Pedir revisão de código.
+- Fazer colaboração segura antes de juntar o código.
+
+# Fork
+Faz uma cópia do repositório remoto  no próprio  Github e você pode  alterar esse repositório como se fosse seu, fazer o push, mesmo sem permissão.
+
+# Clone
+- Faz uma cópia do repositório remoto na sua máquina.
+- Pode usar o repositório, mas para subir alterações, precisa de permissão.
 
 ---
 Simulação de um Projeto Colaborativo
