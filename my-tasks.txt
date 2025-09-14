@@ -26,7 +26,27 @@ ssh-add ~/.ssh/id_ed25519
 ---
 
 # Comandos básicos
+git init
+git status
+git add nome-do-arquivo
+git commit -m "mensagem"
+git log 
+git log --oneline   // histórico linha a linha
+git diff
 
+# Comando para enviar alterações para o GitHub:
+git push  -u origin Main           //primeiro push
+git push origin main ou git push    //demais push
+
+
+# Comandos para desfazer mudanças locais:
+git restore nome-do-arquivo       // remove arquivo
+git restore --staged nome-do-arquivo    //remove arquivo do staged
+git  reset --soft HEAD~1        // desfaz o último commit mantendo as alterações
+git  reset --hard HEAD~1        // desfaz o último commit e também remove TODAS as alterações
+
+
+---
 
 ---
 Simulação de um Projeto Colaborativo
